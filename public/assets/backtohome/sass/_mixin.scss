@@ -1,0 +1,35 @@
+/*VARIABLE*/
+$color-browse: #614330;
+$color-light-browse: #b88060;
+$color-grey: #606060;
+$color-pink: #e9dbd3;
+$color-light-grey: #f0ebe8;
+
+/*MIXIN*/
+
+@mixin media($max-width:767px){
+  @media screen and (max-width: $max-width){
+    @content;
+  }
+}
+
+@mixin fontbase($weight: 400){
+  font-family: 'Montserrat', sans-serif;
+  font-weight: $weight;
+}
+
+@mixin backgroundGradient{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#614330+0,e9dbd3+32,dbcfbe+60,d8af75+100 */
+  background: #614330; /* Old browsers */
+  background: -moz-linear-gradient(left,  #614330 0%, #e9dbd3 32%, #dbcfbe 60%, #d8af75 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #614330 0%,#e9dbd3 32%,#dbcfbe 60%,#d8af75 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #614330 0%,#e9dbd3 32%,#dbcfbe 60%,#d8af75 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#614330', endColorstr='#d8af75',GradientType=1 ); /* IE6-9 */
+
+}
+
+@mixin transition($trans...){
+  transition:$trans;
+  -webkit-transition:$trans;
+  -moz-transition:$trans;
+}

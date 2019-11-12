@@ -1,0 +1,23 @@
+*{margin:0; padding:0;}
+html{
+  font-size:14px;
+}
+body{
+  @include fontbase;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.btn-register{
+  border-radius:10px;
+  padding:5px 25px;
+  color:white;
+  font-size:14px;
+  background:$color-browse;
+  //@include backgroundGradient;
+  border:none;
+  cursor:pointer;
+  font-weight: 600;
+}
