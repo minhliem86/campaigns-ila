@@ -16,4 +16,16 @@ $(".btn-scroll").on("click", function (e) {
   e.preventDefault();
 });
 
+$('#btn-submit-otp').on('click', function(){
+  $('#form-otp').submit();
+  $(this).prop('disabled', true);
+
+})
+
+$('#btn-submit-form').on('click', function(){
+  $('#form-backtohome').submit();
+  $(this).prop('disabled', true);
+
+})
+
 })

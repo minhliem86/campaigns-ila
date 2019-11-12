@@ -28,7 +28,7 @@
                   <input type="text" class="form-control" name="otp" placeholder="Mã OTP" />
             </div>
             <div class="form-button">
-                  <input type="submit" name="btn-submit" class="btn-register btn-submit-otp" value="Xác thực">
+                  <input type="submit" name="btn-submit" class="btn-register btn-submit-otp" id="btn-submit-otp" value="Xác thực">
             </div>
       </form>
 

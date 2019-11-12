@@ -96,7 +96,7 @@ class TeacherDayController extends Controller
 
     public function postSubmit(Request $request)
     {
-    
+
         $utm_campaign = Cookie::get('utm_campaign');
         $utm_source = Cookie::get('utm_source');
         $utm_term = Cookie::get('utm_term');
@@ -144,13 +144,15 @@ class TeacherDayController extends Controller
            'json' => $data
        ]);
 
-       if($response->getStatusCode() == 200){
+       $body_res = json_decode($response->getBody()->getContents());
+
+       if($body_res->status_code == 200){
             Session::put($request->phone, $data);
             Session::save();
 
            return redirect()->route('otp.get', ['phone'=> $request->phone]);
        }else{
-           return back()->with('error','Server interrupt.');
+           return back()->withErrors(['otp_send_fail'=>'Server interrupt.']);
        }
     }
 
@@ -198,7 +200,7 @@ class TeacherDayController extends Controller
         ]);
 
         $body_res = json_decode($response->getBody()->getContents());
-        
+
         switch($body_res->status_code){
             case 401:
                 return redirect()->route('teacherday')->withErrors(['duplicate'=>'Số điện thoại hoặc email của bạn đã đăng ký tư vấn tại hệ thống ILA. Vui lòng chờ điện thoại của tư vấn viên hoặc liên hệ trung tâm ILA gần nhất để được tư vấn thêm.']);

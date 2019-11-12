@@ -57,7 +57,7 @@
                 </select>
             </div>
             <div class="form-button">
-                <input type="submit" name="btn-submit" class="btn-register" value="Đăng Ký Ngay">
+                <input type="button" name="btn-submit" class="btn-register" id="btn-submit-form" value="Đăng Ký Ngay">
             </div>
         </form>
     </div>
