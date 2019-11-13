@@ -238,7 +238,7 @@ section.banner {
           border-radius:5px;
         }
       }
-      
+
     }
   }
 }
@@ -545,6 +545,9 @@ section.chuongtrinhhoc-section {
         text-align: center;
         margin: 0 auto;
         max-width: 800px;
+        @include media(768px){
+          color:$color-browse;
+        }
       }
 
       p.head-line {
